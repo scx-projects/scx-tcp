@@ -12,10 +12,10 @@
 
     <artifactId>scx-tcp</artifactId>
     <packaging>jar</packaging>
-    <version>4.0.0</version>
+    <version>4.0.1</version>
 
     <name>SCX TCP</name>
-    <url>https://github.com/scx567888/scx-tcp</url>
+    <url>https://github.com/scx-projects/scx-tcp</url>
     <description>
         SCX TCP
     </description>
@@ -31,14 +31,14 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/scx567888/scx-tcp/blob/master/LICENSE</url>
+            <url>https://github.com/scx-projects/scx-tcp/blob/master/LICENSE</url>
         </license>
     </licenses>
 
     <scm>
-        <connection>scm:git:https://github.com/scx567888/scx-tcp.git</connection>
-        <developerConnection>scm:git:https://github.com/scx567888/scx-tcp.git</developerConnection>
-        <url>https://github.com/scx567888/scx-tcp</url>
+        <connection>scm:git:https://github.com/scx-projects/scx-tcp.git</connection>
+        <developerConnection>scm:git:https://github.com/scx-projects/scx-tcp.git</developerConnection>
+        <url>https://github.com/scx-projects/scx-tcp</url>
     </scm>
 
     <build>
