@@ -1,6 +1,6 @@
 package cool.scx.tcp;
 
-import cool.scx.functional.ScxConsumer;
+import cool.scx.function.ConsumerX;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -34,7 +34,7 @@ import java.net.SocketAddress;
 /// @version 0.0.1
 public interface ScxTCPServer {
 
-    ScxTCPServer onConnect(ScxConsumer<ScxTCPSocket, ?> connectHandler);
+    ScxTCPServer onConnect(ConsumerX<ScxTCPSocket, ?> connectHandler);
 
     void start(SocketAddress localAddress) throws IOException;
 
