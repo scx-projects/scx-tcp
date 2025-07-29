@@ -1,11 +1,10 @@
 package cool.scx.tcp.test;
 
-import cool.scx.bytes.ByteReader;
-import cool.scx.bytes.exception.NoMoreDataException;
-import cool.scx.bytes.supplier.InputStreamByteSupplier;
 import cool.scx.tcp.TCPServer;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class TCPServerTest {
 
@@ -19,12 +18,15 @@ public class TCPServerTest {
         tcpServer.onConnect(c -> {
             System.out.println("客户端连接了 !!!");
 
-            var dataReader = new ByteReader(new InputStreamByteSupplier(c.inputStream()));
+            var dataReader = new BufferedReader(new InputStreamReader(c.inputStream()));
             while (true) {
                 try {
-                    var s = dataReader.readUntil("\r\n".getBytes());
-                    System.out.println(c.remoteAddress() + " : " + new String(s));
-                } catch (NoMoreDataException e) {
+                    var s = dataReader.readLine();
+                    if (s == null) {
+                        break;
+                    }
+                    System.out.println(c.remoteAddress() + " : " + s);
+                } catch (Throwable e) {
                     break;
                 }
             }

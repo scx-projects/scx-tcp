@@ -1,6 +1,6 @@
 package cool.scx.tcp;
 
-import cool.scx.functional.ScxConsumer;
+import cool.scx.function.ConsumerX;
 
 import java.io.IOException;
 import java.lang.System.Logger;
@@ -22,7 +22,7 @@ public final class TCPServer implements ScxTCPServer {
 
     private final TCPServerOptions options;
     private final Thread serverThread;
-    private ScxConsumer<ScxTCPSocket, ?> connectHandler;
+    private ConsumerX<ScxTCPSocket, ?> connectHandler;
     private ServerSocket serverSocket;
     private volatile boolean running;
 
@@ -37,7 +37,7 @@ public final class TCPServer implements ScxTCPServer {
     }
 
     @Override
-    public ScxTCPServer onConnect(ScxConsumer<ScxTCPSocket, ?> connectHandler) {
+    public ScxTCPServer onConnect(ConsumerX<ScxTCPSocket, ?> connectHandler) {
         this.connectHandler = connectHandler;
         return this;
     }
