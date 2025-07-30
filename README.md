@@ -1,5 +1,6 @@
-# SCX TCP
-
+<p align="center">
+    <img src="https://scx.cool/scx-logo/scx-tcp-logo.svg" width="300px" alt="scx-tcp-logo"/>
+</p>
 <p align="center">
     <a target="_blank" href="https://github.com/scx-projects/scx-tcp/actions/workflows/ci.yml">
         <img src="https://github.com/scx-projects/scx-tcp/actions/workflows/ci.yml/badge.svg" alt="CI"/>
